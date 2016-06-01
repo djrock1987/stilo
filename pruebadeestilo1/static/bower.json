@@ -1,0 +1,11 @@
+{
+  "name": "foundation-compass-app",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "fabricjs": "https://github.com/kangax/fabric.js.git",
+    "bxslider": "https://github.com/stevenwanderski/bxslider-4.git",
+    "fancybox": "https://github.com/fancyapps/fancyBox.git"
+  }
+}

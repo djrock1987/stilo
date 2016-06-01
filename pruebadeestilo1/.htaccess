@@ -1,0 +1,25 @@
+SetEnv CI_ENV production
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        <FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
+            SetEnvIf Origin ":" IS_CORS
+            Header set Access-Control-Allow-Origin "*" env=IS_CORS
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+
+
+
+<IfModule mod_rewrite.c>
+
+# Enforce SSL https://www. 
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine On
+RewriteBase /pruebadeestilo/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /pruebadeestilo/index.php [L]
+</IfModule>

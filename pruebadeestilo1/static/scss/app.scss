@@ -1,0 +1,1264 @@
+@import "variables";
+@import "mixins";
+@import "settings";
+@import "fonts";
+//@import "foundation";
+
+// Or selectively include components
+@import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+"foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+"foundation/components/forms",
+"foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+"foundation/components/type",
+//   "foundation/components/offcanvas",
+"foundation/components/visibility";
+
+
+img {
+	height: auto;
+}
+
+.no-padding {
+	padding:0px;
+}
+
+ul {
+	padding:0;
+	margin:0;
+	li {
+		list-style: none;
+		padding:0;
+		margin:0;
+	}
+}
+.hidden-form{
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.full-width {
+	width:100%;
+	max-width: 1920px;
+	&.header {
+		background:#ffffff;
+		padding: 0;
+		text-align: center;
+		z-index: 5;
+		position: relative;
+		img {
+			width: 100%;
+			max-width: 146px;
+		}
+	}
+	&.main-content {
+		background: url(../images/bg-main-content.jpg) center top no-repeat;
+		max-width: 1248px;
+		background-size: cover;
+		min-height: 730px;
+		position: relative;
+		.app-content {
+			display: none;
+			@include transitions(visibility 0s linear 1s, opacity 1s linear);
+			min-height: 730px;
+			padding:25px 0 0 0;
+			max-width: 915px;
+			margin: auto;
+			float: none;
+			clear: both;
+			background: url(../images/bg-content.jpg) center top no-repeat;
+			background-size: cover;
+			@include box_shadow(0px -1px 11px 0px rgba(50, 50, 50, 0.75));
+			position: absolute;
+			top: 0px;
+			left: 50%;
+			@include translate_2d(-50%, 0);
+			&.active{
+				display: block;
+				@include transitions(display 1s linear);
+			}
+			&.landing{
+				background: url(../images/landing-bg-content.jpg) center top no-repeat;
+				background-size: cover;
+				padding: 0;
+				.title-module{
+					text-align: center;
+					color: #0f4874;
+					border: 1px solid #eaeaea;
+					p {
+						font-size: rem-calc(16);
+					}
+				}
+			}
+			.landing-image {
+				width: 100%;
+				text-align: center;
+				img {
+					width: 40%;
+				}
+			}
+			.step-module {
+				background:#ffffff;
+				padding:9px 0 2px;
+				margin: 0 0 25px;
+				max-width: 262px;
+				@include border_radius('top-right', 91px);
+				@include border_radius('bottom-right', 91px);
+				p {
+					margin:0;
+					padding:0;
+					font-size: 22px;
+					color: #084775;
+					text-align:center;
+					font-family: 'Conv_ITCAvantGardeStd-Md';
+				}
+			}
+			&#step-1-0 {
+				.next-button{
+					bottom: 10px;
+				}
+			}
+			&#step-2-0 {
+				.prev-button{
+					bottom: 10px;
+				}
+			}
+			&#step-2-1, &#step-2-2, &#step-2-3, &#step-3-0 {
+				.prev-button{
+					bottom: 10px;
+				}
+			}
+			&#step-9-0 {
+				.prev-button{
+					left: 80px;
+					right: auto;
+					width: 370px;
+				}
+				.next-button{
+					right: 80px;
+					left: auto;
+				}
+			}
+			&#step-5-0, &#step-6-0, &#step-7-0, &#step-8-0 {
+				.title-module{
+					padding: 10px 0;
+				}
+			}
+			&#step-6-0{
+				.info-content {
+					.selection-steps {
+						min-height: 471px;
+					}
+				}
+			}
+			.title-module {
+				background: #ffffff;
+				padding:10px 0 6px;
+				margin: 0px 0px 24px 0px;
+				h2 {
+					font-size: 28px;
+					color: #084775;
+					text-align: center;
+					margin: 0px;
+					padding:0px;
+					font-family: 'Conv_GothamRnd-Light';
+				}
+			}
+			&#step-3-0 {
+				.info-content {
+					.selection-steps {
+						.upload-photo {
+							margin-bottom: 14px;
+						}
+					}
+				}
+			}
+			&#step-4-0 {
+				.info-content {
+					.selection-steps {
+						.upload-photo {
+							margin-bottom: 60px;
+						}
+					}
+				}
+			}
+			&#step-8-0 {
+				.info-content {
+					.selection-steps {
+						.upload-photo {
+							margin-bottom: 81px;
+						}
+					}
+				}
+			}
+
+			.info-content {
+				max-width: 915px;
+				margin: auto;
+				float: none;
+				clear: both;
+				.option-glasses {
+					background: #ffffff;
+					position:relative;
+					width: 100%;
+					max-width: 866px;
+					padding:0;
+					margin:0px auto 26px;
+					border:1px solid #d2d2d2;
+					span {
+						position:absolute;
+						display: block;
+						width: 17px;
+						height: 17px;
+						img {
+							vertical-align: top;
+						}
+						&.alt {
+							left: 0px;
+							top: 0px;
+						}
+						&.alb {
+							bottom:0px;
+							left: 0px;
+						}
+						&.art {
+							right: 0px;
+							top: 0px;
+						}
+						&.arb {
+							right: 0px;
+							bottom:0px;
+						}
+					}
+					ul {
+						position: relative;
+						display: table;
+						margin:auto;
+						li {
+							display: inline-block;
+							width: 140px;
+							height: 140px;
+							vertical-align: top;
+							margin: 5px 17px;
+							a {
+								display: block;
+								border-bottom: 4px solid transparent;
+								&:hover, &.active{
+									border-bottom: 4px solid #084775;
+								}
+								img {
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+				.selection-steps {
+					background: #ffffff;
+					padding: 0 0 15px 0;
+					min-height: 275px;
+					height: 275px;
+					position: relative;
+					display: table;
+					background-color: white;
+					width: 100%;
+					.glasses-img {
+						min-height: 275px;
+					}
+					@each $style in vintage, elegantes, chic, casual{
+						&.#{$style}{
+							background: url("../images/bg-#{$style}.jpg") center top no-repeat;
+							background-size: 100%;
+							background-position: center bottom;
+						}
+					}
+					.large-7 {
+						&.right-panel {
+							.info-photo {
+								width: 90%;
+							}
+						}
+					}
+					.large-12 {
+						&.right-panel {
+							.info-photo {
+								width: 50%;
+								margin:auto;
+							}
+						}
+					}
+					.glasses-img {
+						img {
+							display: block;
+							position: relative;
+							margin: auto;
+							top: 65px;
+						}
+					}
+					.upload-photo {
+						float: left;
+						text-align: center;
+						margin: 60px 0 62px;
+						&.grado-activacion{
+							margin: 30px 0 31px;
+							a.photo-container {
+								margin: 8px 20px;
+								@include box_shadow( -3px 3px 5px 0px rgba(6,22,102,0.29));
+								display: block;
+								border-bottom: 4px solid transparent;
+								&:hover, &.active {
+									border-bottom: 4px solid #00467c;
+								}
+								p {
+									font-size: 14px;
+								}
+							}
+							a.facebook-share {
+								border-bottom: 4px solid transparent;
+								display: inline-block;
+								&:hover {
+									border-bottom: 4px solid #00467c;
+								}
+								p {
+									color: #00467c;
+									margin: 0;
+								}
+							}
+						}
+						#photo-container {
+							img {
+								max-width: 100%;
+								max-height: 100%;
+							}
+							&.full {
+								background: #fff;
+								
+							}
+						}
+						.photos-grid {
+							a {
+								display: block;
+								img {
+									display: block;
+									max-width: 163px;
+									margin-bottom: 20px;
+								}
+							}
+						}
+						a {
+							p {
+								color: #00467c;
+								font-size: 16px;
+								font-family: 'Conv_GothamRnd-Light';
+							}
+							&.method-selection, &.photo-selection, &.share-selection{
+								display: block;
+								width: 163px;
+								margin: auto;
+								border-bottom: 4px solid transparent;
+								&:hover, &.active{
+									border-bottom: 4px solid #084775;
+								}
+							}
+						}
+						&.right-panel {
+							margin: 25px 0 30px;
+							.info-photo {
+								border:1px solid #cbcbcb;	
+								padding: 15px 0 15px;
+								h4 {
+									font-size: 16px;
+									color:#05477a;
+									font-family: 'Conv_GothamRnd-Light';
+									display: block;
+									position:relative;
+									max-width: 315px;
+									margin: auto;
+									padding:0 0 15px 0;
+									span {
+										height: 3px;
+										background: #cbcbcb;
+										width: 80%;
+										position:absolute;
+										left: 0;
+										right: 0;
+										bottom:0;
+										margin: auto;
+									}
+								}
+								.machine {
+									.picture {
+										display: block;
+										height: 220px;
+										width: 220px;
+										position: relative;
+										margin:12px auto 0;
+										border:5px solid #f6f6f6;
+										/*background:url(../images/line-pattern.jpg);*/
+										cursor: pointer;
+										&.selfie-container{
+											video, canvas, #output {
+												width: 100%;
+												height: 100%;
+											}
+											video {
+												@include transform(scaleX(-1));
+												background-color: white;
+											}
+											canvas {
+												display: none;
+											}
+											#output {
+												position: absolute;
+												top: 0;
+												visibility: hidden;
+												opacity: 0;
+												&.active{
+													visibility: visible;
+													opacity: 1;
+												}
+												img {
+													position: absolute;
+													top: 50%;
+													left: 0;
+													@include translate_2d(0, -50%);
+													border: 0;
+												}
+											}
+										}
+										&.photo-selection {
+											background:url(../images/load-computador.png);
+											&.selfie-container {
+												background:url(../images/load-cam.png);
+											}
+										}
+									}
+									.selfie-buttons {
+										position:absolute;
+										top: 170px;
+										right: 95px;
+										.cancel {
+											display: block;
+											height: 73px;
+											width: 73px;
+											margin-bottom: 15px;
+										}
+										.accept {
+											display: block;
+											height: 73px;
+											width: 73px;
+										}
+									}
+								}
+								.facebook-pic {
+									position:relative;
+									.color-selector{
+										text-align: center;
+										li {
+											margin: 10px 0;
+											a{
+												color: white;
+												display: inline-block;
+												width: 180px;
+												line-height: 60px;
+												font-size: rem-calc(17.5);
+												@include border_radius('', 2px);
+											}
+										}
+									}
+									> a {
+										position: absolute;
+										right: 0;
+										bottom:-15px;
+										width: 56px;
+										height: 56px;
+										z-index: 3;
+										img {
+											margin: 0;
+										}
+									}
+									.bx-wrapper {
+										margin-top: 20px;
+										@include box_shadow(none);
+										border: 0;
+										background: transparent;
+										margin: 0;
+									}
+									.photo-album-slider {
+										margin-top: 0px;
+										display: block;
+										width: 100%;
+										height: 232px;
+										overflow: hidden;
+									}
+									#monturas-photos, #facebook-photos {
+										ul.photos-grid {
+											li {
+												a {
+													position: relative;
+													background-color: white;
+													height: 100%;
+													img {
+														position: absolute;
+														top: 50%;
+														left: 50%;
+														@include transform(translate(-50%,-50%));
+													}
+												}
+											}
+										}
+									}
+									ul.photos-grid {
+										margin: 0;
+										text-align: center;
+										li {
+											width: 100px;
+											height: 100px;
+											border:5px solid #f6f6f6;
+											background:url(../images/line-pattern.jpg);
+											margin: 3px;
+											display: inline-block;
+											cursor: pointer;
+											&:hover, &.selected, &.active {
+												border:5px solid #0fc3e6;
+											}
+											a {
+												border: 0;
+												max-width: 100%;
+												max-height: 100%;
+												overflow: hidden;
+												img {
+													max-width: 100%;
+													max-height: 100%;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						.info-photo {
+							border:1px solid #cbcbcb;	
+							width: 90%;
+							padding: 15px 0;
+							.interac-elememnts {
+								padding: 24px 24px 10px 40px;
+								display: table;
+								.shape-face {
+									p {
+										display: block;
+										float: left;
+									}
+									a {
+										display: inline-block;
+										width: auto;
+										margin: -10px 8px 0;
+									}
+								}
+								p {
+									font-size: 16px;
+									color: #a6a6a6;
+									text-align: left;
+									font-family: 'Conv_Gotham-Medium';
+									font-weight: bold;
+								}
+								.control-element {
+									width: 100%;
+									clear: both;
+									float: none;
+									p {
+										float: left;
+										display: block;
+										width: 60px;
+									}
+									.bar-element {
+										float: left;
+										width: 340px;
+										.container {
+											float: left;
+											width: 220px;
+											height: 10px;
+											border: 3px solid #dcdcdc;
+											background: #ffffff;
+											@include border_radius('', 10px);
+											margin-top: 10px;
+											.ui-slider-range {
+												background:#e6145f;
+											}
+											.ui-slider-handle {
+												width: 17px;
+												height: 17px;
+												background:#e6145f;
+												border: 2px solid #ffffff;
+												@include border_radius('', 17px);
+												cursor: move;
+												margin: none;
+												top: -7px;
+											}
+										}
+										.minus{
+											height: 34px;
+											width: 35px;
+											float: left;
+											cursor:pointer;
+											margin: 0px 12px 0px 20px;
+										}
+										.plus{
+											height: 34px;
+											width: 35px;
+											float: right;
+											cursor:pointer;
+										}
+									}
+								}
+							}
+						}		
+						.image-selected {
+							width: 198px;
+							height: 219px;
+							position: relative;
+							margin:0 auto 20px;
+							.frame-set {
+								position: absolute;
+								top: 0;
+								left: 0;
+								z-index: 4;
+								width: 198px;
+								height: 219px;
+								background:url(../images/face-frame.png);
+								&.view {
+									background:url(../images/face-frame-view.png);
+								}
+							}
+							.border-canvas {
+								position: absolute;
+								display: block;
+								background-color: #084775;
+								&.border-top{
+									width: 100%;
+									height: 8px;
+									top: 0;
+									left: 0;
+								}
+								&.border-bottom{
+									width: 100%;
+									height: 33px;
+									bottom: 0;
+									left: 0;
+								}
+								&.border-left{
+									width: 9px;
+									height: 100%;
+									top: 0;
+									left: 0;
+								}
+								&.border-right{
+									width: 9px;
+									height: 100%;
+									top: 0;
+									right: 0;
+								}
+							}
+							canvas {
+								width: 198px;
+								height: 219px;
+								position: absolute;
+								top: 0;
+								left: 0;
+							}
+							img {
+								display: block;
+								position: relative;
+								z-index: 1;
+								padding: 6px 8px 0 9px;
+							}
+						}
+						> p {
+							font-size: 16px;
+							color: #00467c;
+							font-family: 'Conv_GothamRnd-Light';
+							display: block;
+							max-width: 198px;
+							margin:auto;
+						}
+					}
+					&.select-image-source {
+						.next-button {
+							margin: auto;
+							display: block;
+							float: none;
+							clear: both;
+							position: relative;
+							bottom: auto;
+						}
+						.transitions-selection{
+							padding: 35px 16px;
+							float: left;
+							> div {
+								color: white;
+								display: block;
+								width: 75%;
+								min-height: 386px;
+								border: 3px solid #dcdcdc;
+								@include border_radius('', 10px);
+								padding: 27px 22px;
+								cursor: pointer;
+								h3 {
+									border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+									text-indent: -9999px;
+									display: block;
+									background-repeat: no-repeat;
+									background-position: center top;
+									height: 90px;
+									background-size: 204px 66px;
+								}
+								ul {
+									margin-left: 26px;
+									li {
+										list-style-image: url('../images/item-list.png');
+									}
+								}
+								&#transitions-signature{
+									float: right;
+									background-color: #022864;
+									h3 {
+										background-image: url('../images/transitions_signature.svg');
+									}
+								}
+								&#transitions-xtractive{
+									float: left;
+									background-color: black;
+									h3 {
+										background-image: url('../images/transitions_xtractive.svg');
+									}
+								}
+							}
+						}
+					}
+					.buttons {
+						&.prev-next {
+							.next-button {
+								float: right;
+								margin-right: 55px;
+							}
+							.prev-button {
+								float: left;
+								margin-left: 55px;
+							}
+							&.more-options {
+								text-align: center;
+								clear: both;
+								a {
+									max-width: 200px;
+									padding: 10px 0px;
+									float: none;
+									display: inline-block;
+									margin: 0 40px !important;
+									position: relative;
+									bottom: auto;
+								}
+								.more {
+									color: #ffffff;
+									font-size: 20px;
+									font-family: 'Conv_Gotham-Medium';
+									background:#0fc3e6;
+									width: 260px;
+									padding:10px 00px;
+									@include border_radius('', 64px);
+									text-align: center;
+									position: relative;
+								}
+							}
+						}
+						label {
+							&.error {
+								position: absolute;
+								margin-left: auto;
+								margin-right: auto;
+								left: 50%;
+								bottom: 65px;
+								display: block;
+								height: 30px;
+								line-height: 30px;
+								@include translate_2d(-50%, 0);
+								background-color: white;
+								border-radius: 15px;
+								padding: 0 20px;
+								text-align: center;
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+		.next-button, .prev-button {
+			color: #ffffff;
+			font-size: 20px;
+			font-family: 'Conv_Gotham-Medium';
+			background:$button-color;
+			width: 260px;
+			padding:10px 60px;
+			@include border_radius('', 64px);
+			text-align: center;
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+		}
+		.landing {
+			.next-button, .prev-button {
+				bottom: 90px;
+			}
+		}
+	}
+	&.footer {
+		background:#ffffff;
+		padding: 0;
+		z-index: 5;
+		text-align: center;
+		.footer-content {
+			background: #084775;
+			padding: 20px 0px;
+			max-width: 915px;
+			margin: auto;
+			p {
+				color: #ffffff;
+				font-size: 9px;
+				margin:0px;
+				padding:0px;
+				font-family: 'Conv_GothamRnd-Light';
+				strong {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.lightbox {
+	display: none;
+	width: 500px;
+}
+
+form {
+	input[type="submit"]{
+		color: #ffffff;
+		font-size: 20px;
+		font-family: 'Conv_Gotham-Medium';
+		background: #fc1ca0;
+		padding: 10px 60px;
+		@include border_radius('', 64px);
+		border: 0;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		outline-style: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+}
+
+/* Porttrait hasta Iphone 6 */
+
+@media screen and (max-width: 377px) {
+    .full-width.main-content {
+        overflow-x: hidden;
+		&.main-content {
+			min-height: 573px;
+		}
+        .app-content {
+			min-height: 573px;
+            &.landing {
+                .title-module {
+                    p {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            .landing-image {
+                img {
+                    width: 70%;
+                }
+            }
+            &.landing {
+                &.active {
+                    .next-button {
+                        bottom: 150px;
+                    }
+                }
+            }
+            .step-module {
+                padding: 6px 0 0px;
+                margin: 0 0 15px;
+                p {
+                    font-size: 18px;
+                }
+            }
+            .title-module {
+                padding: 6px 0 1px;
+                margin: 0px 0px 20px 0px;
+                h2 {
+                    font-size: 22px;
+                }
+            }
+            .info-content {
+                .option-glasses {
+                    ul {
+                        text-align: center;
+                        li {
+                            margin: 5px 7px;
+                        }
+                    }
+                }
+                .selection-steps {
+					background-color: white!important;
+					background-position: center top!important;
+                    min-height:370px;
+                    height: 370px;
+					position: relative;
+                    .glasses-img {
+						margin-top: 40%;
+                        img {
+							top: 0;
+                        } 
+                    }
+                    .buttons {
+                        .next-button {
+                            bottom: 70px;
+                        }
+                    }
+                    &.select-image-source {
+                        .upload-photo {
+                            float: none;
+                            margin: 15px 0 0px;
+                            a {
+                                width:90%;
+                                img {
+                                    display: block;
+                                    max-width: 130px;
+                                    margin: 0 auto 5px;
+                                }
+                            }
+                            p {
+                                display: block;
+                                margin: auto;
+                                width: 90%;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-2-0 {
+                .info-content {
+                    height: 744px;
+                    .selection-steps {
+                        height: 744px;
+                        .buttons {
+                            top: 155px;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+            &#step-2-1, &#step-2-2, &#step-2-3 {
+                .selection-steps {
+                    .buttons {
+                        .next-button {
+                            bottom: 20px;
+                        }
+                    }
+                    &.select-image-source {
+						min-height: 520px;
+						height:520px;
+                        .upload-photo {
+                            &.right-panel {
+                                float:none;
+                                .info-photo {
+                                    width: 90%;
+                                    .machine {
+                                        .selfie-buttons {
+                                            position: absolute;
+                                            top: 254px;
+                                            right: 17px;
+                                            a {
+                                                height: 45px;
+                                                width: 45px;
+                                                img {
+                                                    max-width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .buttons {
+                            &.prev-next {
+                                position: relative;
+                                bottom: -100px;
+                                height: 60px;
+                                .prev-button {
+                                    margin: auto !important;
+                                    float: none !important;
+									bottom: 85px;
+                                }
+                                .next-button {
+                                    float: none !important;
+                                    margin: auto !important;
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-2-2 {
+                .info-content {
+                    .selection-steps {
+                        &.select-image-source {
+                            .upload-photo {
+                                &.right-panel {
+                                    .info-photo {
+                                        .facebook-pic {
+                                            ul#facebook-photos {
+                                                height: 424px;
+                                                overflow-y: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-3-0 {
+                .selection-steps {
+                    min-height: 800px;
+                    height: 800px;
+                    &.select-image-source {
+                        .upload-photo {
+                            max-width: 320px;
+                            position: relative;
+                            margin: 20px auto;
+                        }
+                        .info-photo {
+                            margin: auto;
+                            position: relative;
+                            padding-bottom: 55px;
+                            margin-bottom:10px;
+                            .interac-elememnts {
+                                display: block;
+                                padding:10px;
+                                .shape-face {
+                                    text-align: center;
+                                    p {
+                                        float: none;
+                                        width: 100%;
+                                        text-align: center;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                                .control-element {
+                                    p {
+                                        float: none;
+                                        width: 100%;
+                                        text-align: center;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                                .control-element {
+                                    .bar-element {
+                                        .minus {
+                                            margin: 0px 7px 0px 9px;
+                                            height: 30px;
+                                            width: 30px;
+                                        }
+                                        .container {
+                                            width: 190px;
+                                        }
+                                        .plus {
+                                            height: 30px;
+                                            width: 30px;
+                                            float: left;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .buttons {
+                            &.prev-next {
+                                top: 0px;
+                                position: relative;
+                                display: table;
+                                width:100%;
+                                height: 150px;
+                                .next-button {
+                                    float: none;
+                                    margin-right: 0;
+                                    margin: auto;
+                                    top: 75px;
+                                }
+                                .prev-button {
+                                    float: none;
+                                    margin-left: 0;
+                                    margin: auto;
+									bottom: 85px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-4-0 {
+                .info-content {
+                    .right-panel {
+                        .info-photo {
+                            margin: auto;
+                            .facebook-pic {
+                                .photo-album-slider {
+                                    height: 430px;
+                                }
+                                .bx-has-controls-direction {
+                                    height: 32px;
+                                    margin-top: 10px;
+                                    a {
+                                        width: 32px !important;
+									}
+								}
+							}
+						}
+					}
+					.selection-steps {
+						.upload-photo {
+							margin-bottom: 20px;
+                        }
+                        .buttons {
+                            &.prev-next {
+                                &.more-options {
+                                    a {
+                                        margin: 5px 40px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-5-0 {
+                .selection-steps {
+                    &.select-image-source {
+                        .transitions-selection {
+                            padding: 10px 15px;
+                        }
+                        .filter-selection {
+                            float: none;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &#step-6-0 {
+                .info-content {
+                    .upload-photo {
+                        &.right-panel {
+                            .info-photo {
+                                margin: auto;
+                            }
+                        }
+                    }
+                    .selection-steps {
+                        .buttons {
+                            &.prev-next {
+                                &.more-options {
+                                    a {
+                                        margin: 5px 40px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-7-0 {
+                .info-content {
+                    .selection-steps {
+                        .buttons {
+                            &.prev-next {
+                                &.more-options {
+                                    a {
+                                        margin: 5px 40px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+			&#step-9-0 {
+				background: white;
+				.ending-image {
+					margin-bottom: 24px;
+				}
+				.buttons {
+					&.prev-next {
+						.prev-button {
+							margin: auto !important;
+							float: none !important;
+							bottom: 0px;
+							display: block;
+							float: none;
+							clear: both;
+							position: relative;
+							left: 0;
+							width: 100%;
+							bottom: 21px;
+						}
+						.next-button {
+							float: none !important;
+							margin: auto !important;
+							left: 0;
+							width: 100%;
+							clear: both;
+							right: auto;
+						} 
+					}
+				}
+            }
+        }
+    }
+}
+
+

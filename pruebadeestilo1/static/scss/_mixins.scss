@@ -1,0 +1,64 @@
+/* 
+    Created on : 7/11/2015, 11:06:48 PM
+    Author     : Alexander Baron <alexbaron50@gmail.com>
+*/
+
+@mixin translate_2d($horizontal, $vertical){
+  -webkit-transform: translate($horizontal, $vertical);
+  -ms-transform:     translate($horizontal, $vertical);
+  transform:         translate($horizontal, $vertical);
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin box_shadow($shadow){
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow:    $shadow;
+  box-shadow:         $shadow;
+}
+
+@mixin border_radius($corner, $radius){
+  @if $corner == 'top-left' {
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-radius-topleft:     $radius;
+    -ms-border-radius-topleft:      $radius;
+    border-top-left-radius:         $radius;
+  }
+  @if $corner == 'top-right' {
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-radius-topright:    $radius;
+    -ms-border-radius-topright:     $radius;
+    border-top-right-radius:        $radius;
+  }
+  @if $corner == 'bottom-right' {
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-radius-bottomright:     $radius;
+    -ms-border-radius-bottomright:      $radius;
+    border-bottom-right-radius:         $radius;
+  }
+  @if $corner == 'bottom-left' {
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-radius-bottomleft:     $radius;
+    -ms-border-radius-bottomleft:      $radius;
+    border-bottom-left-radius:         $radius;
+  }
+  @if $corner == ''{
+    -webkit-border-radius: $radius;
+    -moz-border-radius:    $radius;
+    -ms-border-radius:     $radius;
+    border-radius:         $radius; 
+  }
+}
+
+@mixin transitions($transition...){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
