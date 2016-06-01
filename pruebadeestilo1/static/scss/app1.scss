@@ -895,10 +895,10 @@ form {
     .full-width.main-content {
         overflow-x: hidden;
 		&.main-content {
-			min-height: 455px;
+			min-height: 80%;
 		}
         .app-content {
-			min-height: 455px;	
+			min-height: 100%;
             &.landing {
                 .title-module {
                     p {
@@ -915,7 +915,380 @@ form {
             &.landing {
                 &.active {
                     .next-button {
-                        bottom: 7%;
+                        bottom: 10%;
+                    }
+                }
+            }
+            .step-module {
+                padding: 6px 0 0px;
+                margin: 0 0 15px;
+                p {
+                    font-size: 18px;
+                }
+            }
+            .title-module {
+                padding: 6px 0 1px;
+                margin: 0px 0px 20px 0px;
+                h2 {
+                    font-size: 22px;
+                }
+            }
+            .info-content {
+                .option-glasses {
+                    ul {
+                        text-align: center;
+                        li {
+                            margin: 5px 7px;
+                        }
+                    }
+                }
+                .selection-steps {
+					background-color: white!important;
+					background-position: center top!important;
+                    min-height:370px;
+                    height: 370px;
+					position: relative;
+                    .glasses-img {
+						margin-top: 40%;
+                        img {
+							top: 0;
+                        } 
+                    }
+                    .buttons {
+                        .next-button {
+                            bottom: 70px;
+                        }
+                    }
+                    &.select-image-source {
+                        .upload-photo {
+                            float: none;
+                            margin: 15px 0 0px;
+                            a {
+                                width:90%;
+                                img {
+                                    display: block;
+                                    max-width: 130px;
+                                    margin: 0 auto 5px;
+                                }
+                            }
+                            p {
+                                display: block;
+                                margin: auto;
+                                width: 90%;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-2-0 {
+                .info-content {
+                    height: 744px;
+                    .selection-steps {
+                        height: 744px;
+                        .buttons {
+                            top: 155px;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+            &#step-2-1, &#step-2-2, &#step-2-3 {
+                .selection-steps {
+                    .buttons {
+                        .next-button {
+                            bottom: 20px;
+                        }
+                    }
+                    &.select-image-source {
+						min-height: 520px;
+						height:520px;
+                        .upload-photo {
+                            &.right-panel {
+                                float:none;
+                                .info-photo {
+                                    width: 90%;
+                                    .machine {
+                                        .selfie-buttons {
+                                            position: absolute;
+                                            top: 254px;
+                                            right: 17px;
+                                            a {
+                                                height: 45px;
+                                                width: 45px;
+                                                img {
+                                                    max-width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .buttons {
+                            &.prev-next {
+                                position: relative;
+                                bottom: -100px;
+                                height: 60px;
+                                .prev-button {
+                                    margin: auto !important;
+                                    float: none !important;
+									bottom: 85px;
+                                }
+                                .next-button {
+                                    float: none !important;
+                                    margin: auto !important;
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-2-2 {
+                .info-content {
+                    .selection-steps {
+                        &.select-image-source {
+                            .upload-photo {
+                                &.right-panel {
+                                    .info-photo {
+                                        .facebook-pic {
+                                            ul#facebook-photos {
+                                                height: 424px;
+                                                overflow-y: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-3-0 {
+                .selection-steps {
+                    min-height: 800px;
+                    height: 800px;
+                    &.select-image-source {
+                        .upload-photo {
+                            max-width: 320px;
+                            position: relative;
+                            margin: 20px auto;
+                        }
+                        .info-photo {
+                            margin: auto;
+                            position: relative;
+                            padding-bottom: 55px;
+                            margin-bottom:10px;
+                            .interac-elememnts {
+                                display: block;
+                                padding:10px;
+                                .shape-face {
+                                    text-align: center;
+                                    p {
+                                        float: none;
+                                        width: 100%;
+                                        text-align: center;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                                .control-element {
+                                    p {
+                                        float: none;
+                                        width: 100%;
+                                        text-align: center;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                                .control-element {
+                                    .bar-element {
+                                        .minus {
+                                            margin: 0px 7px 0px 9px;
+                                            height: 30px;
+                                            width: 30px;
+                                        }
+                                        .container {
+                                            width: 190px;
+                                        }
+                                        .plus {
+                                            height: 30px;
+                                            width: 30px;
+                                            float: left;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .buttons {
+                            &.prev-next {
+                                top: 0px;
+                                position: relative;
+                                display: table;
+                                width:100%;
+                                height: 150px;
+                                .next-button {
+                                    float: none;
+                                    margin-right: 0;
+                                    margin: auto;
+                                    top: 75px;
+                                }
+                                .prev-button {
+                                    float: none;
+                                    margin-left: 0;
+                                    margin: auto;
+									bottom: 85px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-4-0 {
+                .info-content {
+                    .right-panel {
+                        .info-photo {
+                            margin: auto;
+                            .facebook-pic {
+                                .photo-album-slider {
+                                    height: 430px;
+                                }
+                                .bx-has-controls-direction {
+                                    height: 32px;
+                                    margin-top: 10px;
+                                    a {
+                                        width: 32px !important;
+									}
+								}
+							}
+						}
+					}
+					.selection-steps {
+						.upload-photo {
+							margin-bottom: 20px;
+                        }
+                        .buttons {
+                            &.prev-next {
+                                &.more-options {
+                                    a {
+                                        margin: 5px 40px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-5-0 {
+                .selection-steps {
+                    &.select-image-source {
+                        .transitions-selection {
+                            padding: 10px 15px;
+                        }
+                        .filter-selection {
+                            float: none;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &#step-6-0 {
+                .info-content {
+                    .upload-photo {
+                        &.right-panel {
+                            .info-photo {
+                                margin: auto;
+                            }
+                        }
+                    }
+                    .selection-steps {
+                        .buttons {
+                            &.prev-next {
+                                &.more-options {
+                                    a {
+                                        margin: 5px 40px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#step-7-0 {
+                .info-content {
+                    .selection-steps {
+                        .buttons {
+                            &.prev-next {
+                                &.more-options {
+                                    a {
+                                        margin: 5px 40px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+			&#step-9-0 {
+				background: white;
+				.ending-image {
+					margin-bottom: 24px;
+				}
+				.buttons {
+					&.prev-next {
+						.prev-button {
+							margin: auto !important;
+							float: none !important;
+							bottom: 0px;
+							display: block;
+							float: none;
+							clear: both;
+							position: relative;
+							left: 0;
+							width: 100%;
+							bottom: 21px;
+						}
+						.next-button {
+							float: none !important;
+							margin: auto !important;
+							left: 0;
+							width: 100%;
+							clear: both;
+							right: auto;
+						} 
+					}
+				}
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 377px) {
+    .full-width.main-content {
+        overflow-x: hidden;
+		&.main-content {
+			min-height: 573px;
+		}
+        .app-content {
+			min-height: 573px;
+            &.landing {
+                .title-module {
+                    p {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            .landing-image {
+                img {
+                    width: 70%;
+                }
+            }
+            &.landing {
+                &.active {
+                    .next-button {
+                        bottom: 150px;
                     }
                 }
             }

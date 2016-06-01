@@ -4951,18 +4951,18 @@ form input[type="submit"] {
 }
 
 /* Porttrait hasta Iphone 6 */
-@media screen and (max-width: 377px) {
+@media screen and (max-width: 320px) {
   /* line 895, ../static/scss/app.scss */
   .full-width.main-content {
     overflow-x: hidden;
   }
   /* line 897, ../static/scss/app.scss */
   .full-width.main-content.main-content {
-    min-height: 573px;
+    min-height: 455px;
   }
   /* line 900, ../static/scss/app.scss */
   .full-width.main-content .app-content {
-    min-height: 573px;
+    min-height: 455px;
   }
   /* line 904, ../static/scss/app.scss */
   .full-width.main-content .app-content.landing .title-module p {
@@ -4975,7 +4975,7 @@ form input[type="submit"] {
   }
   /* line 917, ../static/scss/app.scss */
   .full-width.main-content .app-content.landing.active .next-button {
-    bottom: 150px;
+    bottom: 10%;
   }
   /* line 922, ../static/scss/app.scss */
   .full-width.main-content .app-content .step-module {
@@ -5270,3 +5270,8 @@ form input[type="submit"] {
 }
 
 /*# sourceMappingURL=app.css.map */
+
+
+
+
+

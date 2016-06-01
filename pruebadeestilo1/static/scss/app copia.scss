@@ -889,16 +889,16 @@ form {
 	}
 }
 
-/* Porttrait hasta Iphone 5 */
+/* Porttrait hasta Iphone 6 */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 377px) {
     .full-width.main-content {
         overflow-x: hidden;
 		&.main-content {
-			min-height: 455px;
+			min-height: 573px;
 		}
         .app-content {
-			min-height: 455px;	
+			min-height: 573px;
             &.landing {
                 .title-module {
                     p {
@@ -915,7 +915,7 @@ form {
             &.landing {
                 &.active {
                     .next-button {
-                        bottom: 7%;
+                        bottom: 150px;
                     }
                 }
             }
